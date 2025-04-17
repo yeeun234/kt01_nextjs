@@ -21,22 +21,31 @@ export default function Nav() {
           <Image src="/react.svg" alt="react" width={42} height={42}/> + 
           <Image src="/next.svg" alt="react" width={42} height={42}/>
         </div>
-        
-        <div className="bg-green-200  hover:bg-green-300   rounded-lg  sm:w-auto px-5 py-2.5 text-center">
-          <Link href="/">Home</Link>
-        </div>
-        <div className="bg-green-200  hover:bg-green-300   rounded-lg  sm:w-auto px-5 py-2.5 text-center">
-          <Link href="/clock">시계</Link>
-        </div>
-        <div className="bg-green-200  hover:bg-green-300   rounded-lg  sm:w-auto px-5 py-2.5 text-center">
-          <Link href="/lotto">로또</Link>
-        </div>
-        <div className="bg-green-200  hover:bg-green-300   rounded-lg  sm:w-auto px-5 py-2.5 text-center">
-          <Link href="/food">푸드카드</Link>
-        </div>
-        <div className="bg-green-200  hover:bg-green-300   rounded-lg  sm:w-auto px-5 py-2.5 text-center">
-          <Link href="/subway">지하철</Link>
-        </div>
+        <Link href="/">
+          <div className="bg-green-200  hover:bg-green-300   rounded-lg  sm:w-auto px-5 py-2.5 text-center">
+            Home
+          </div>
+        </Link>
+        <Link href="/clock">
+          <div className="bg-green-200  hover:bg-green-300   rounded-lg  sm:w-auto px-5 py-2.5 text-center">
+            Clock
+          </div>
+        </Link>
+        <Link href="/lotto">
+          <div className="bg-green-200  hover:bg-green-300   rounded-lg  sm:w-auto px-5 py-2.5 text-center">
+            Lotto
+          </div>
+        </Link>
+        <Link href="/food">
+          <div className="bg-green-200  hover:bg-green-300   rounded-lg  sm:w-auto px-5 py-2.5 text-center">
+            FoodCard
+          </div>
+        </Link>
+        <Link href="/subway">
+          <div className="bg-green-200  hover:bg-green-300   rounded-lg  sm:w-auto px-5 py-2.5 text-center">
+            Subway
+          </div>
+        </Link>
         {/* {login && <Link href="/TodoList">
         <div className="bg-green-200  hover:bg-green-300   rounded-lg  sm:w-auto px-5 py-2.5 text-center">TodoList</div>
         </Link>}
