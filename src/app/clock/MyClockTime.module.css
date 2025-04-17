@@ -1,0 +1,10 @@
+.pst {
+    width: auto;
+    height: auto;
+    padding: 10px;
+    color: rgb(252, 0, 147);
+    background-color: pink;
+    font-weight: bold;
+    border-radius: 20px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
