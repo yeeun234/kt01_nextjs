@@ -46,6 +46,16 @@ export default function Nav() {
             Subway
           </div>
         </Link>
+        <Link href="/productList">
+          <div className="bg-green-200  hover:bg-green-300   rounded-lg  sm:w-auto px-5 py-2.5 text-center">
+            Product List
+          </div>
+        </Link>
+        <Link href="/productList2">
+          <div className="bg-green-200  hover:bg-green-300   rounded-lg  sm:w-auto px-5 py-2.5 text-center">
+            Product List2
+          </div>
+        </Link>
         {/* {login && <Link href="/TodoList">
         <div className="bg-green-200  hover:bg-green-300   rounded-lg  sm:w-auto px-5 py-2.5 text-center">TodoList</div>
         </Link>}
