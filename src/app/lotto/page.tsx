@@ -7,10 +7,10 @@ export default function Lotto():React.ReactNode {
     //useState 타입선언
     const [lottoTags, setLottoTags] = useState<React.ReactNode[]>([]);
     const handleLottoNum = () => {
-        let lottoNum:number[] = [];
+        const lottoNum:number[] = [];
 
         while (lottoNum.length < 7) {
-            let n = Math.floor(Math.random() * 45) + 1 //`1~45
+            const n = Math.floor(Math.random() * 45) + 1 //`1~45
 
             //랜덤수를 배열에 넣기
             if (!lottoNum.includes(n)) {
@@ -19,20 +19,20 @@ export default function Lotto():React.ReactNode {
         }
 
         //보너스 번호 => 배열로 나옴
-        let bonus:number[] = lottoNum.splice(-1);
+        const bonus:number[] = lottoNum.splice(-1);
 
 
         //로또 번호 정렬
         lottoNum.sort((a:number, b:number) =>  a - b )
 
         //로또 배열 다시 생성 
-        let lottoNum2 : (number|string)[] = [...lottoNum, '+', ...bonus];
+        const lottoNum2 : (number|string)[] = [...lottoNum, '+', ...bonus];
 
         // setLottoTags(lottoNum);
         // console.log("lottoNum",lottoNum);
 
         //Tailball만들기
-        let tm = lottoNum2.map((item:number|string, idx:number) =>
+        const tm = lottoNum2.map((item:number|string, idx:number) =>
                      item === '+' ? 
                     <span 
                     key={'n' + item + idx}

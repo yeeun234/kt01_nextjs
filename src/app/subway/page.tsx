@@ -42,7 +42,7 @@ export default function Subway() {
     const [tags,setTags] = useState<React.ReactNode[]>([]); //div여러개를 배열로 받았으니 
     const fetchSubwayData = async (code?:string) => {
         let url = `https://apis.data.go.kr/6260000/IndoorAirQuality/getIndoorAirQualityByStation?`;
-        url = `${url}serviceKey=${process.env.NEXT_PUBLIC_NEXT_PUBLIC_API_KEY}`;
+        url = `${url}serviceKey=${process.env.NEXT_PUBLIC_API_KEY}`;
         url = `${url}&pageNo=1&numOfRows=10&resultType=json`;
         url = `${url}&controlnumber=${new Date().toISOString().slice(0, 10).replaceAll('-','')}07`;
         url = `${url}&areaIndex=${code}`;
@@ -70,7 +70,7 @@ export default function Subway() {
         const itemKeys:string[] = Object.keys(scode as Scode);
         const scodeT = scode as Scode;
         console.log(itemKeys);
-        let tm = itemKeys.map((item:string)=>{
+        const tm = itemKeys.map((item:string)=>{
             return(<div  key={item}>
                 <div >
                     {scodeT[item].name}

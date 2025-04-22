@@ -13,7 +13,7 @@ export default function Home() {
       setLogin(true);
     }
     setIsChecked(true);
-  }, []);
+  },[] );
 
   if (!isChecked) {
     return <div>Loading...</div> // temporary fallback

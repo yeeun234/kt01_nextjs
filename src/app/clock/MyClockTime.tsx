@@ -11,12 +11,12 @@ function MyClockTime() {
     const [currentTime, setCurrentTime] = useState<Date>(new Date());
     
 
-    const handleClick = ():void => {
-        setCurrentTime(new Date());
-    }
+    // const handleClick = ():void => {
+    //     setCurrentTime(new Date());
+    // }
 
     useEffect(()=>{
-        let tm = setInterval(()=>{
+        const tm = setInterval(()=>{
             setCurrentTime(new Date())
         },1000);
 

@@ -10,7 +10,7 @@ export default function FoodMain() {
     const handle = (c:string) => {
         console.log(c)
         
-        let getarrays:fooddataT[] = fooddata.filter((item:fooddataT) => item["운영주체 분류"].replace(/ /g,'')==c);
+        const getarrays:fooddataT[] = fooddata.filter((item:fooddataT) => item["운영주체 분류"].replace(/ /g,'')==c);
         console.log("운영주체 분류에 따른 어레이 필터 " ,getarrays);
 
         const items = getarrays.map((i:fooddataT) => <FoodCard
