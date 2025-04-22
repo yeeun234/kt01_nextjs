@@ -6,22 +6,25 @@ import { IsLoginAtom } from "@/atoms/IsLoginAtom";
 import { useAtom } from "jotai";
 export default function Home() {
   const [isLogin,setLogin]=useAtom(IsLoginAtom);
-  const [isChecked, setIsChecked] = useState(false);
-  useEffect(() => {
+  const [email, setEmail] = useState<string|null>('');
+  const [check ,setCheck] = useState(false);
+   useEffect(() => {
     const email = localStorage.getItem('email');
     if (email) {
       setLogin(true);
+      setEmail(email);  
     }
-    setIsChecked(true);
+    setCheck(true);
+  
+
   },[] );
 
-  if (!isChecked) {
-    return <div>Loading...</div> // temporary fallback
+  if(!check){
+    return <div>Loading...</div>
   }
-
   return (
     <div className="w-full h-full flex justify-center items-center">
-           { isLogin ? `${localStorage.getItem('email')}님이 로그인 하셨습니다. `:<Login/> } 
+           { isLogin ? `${email}님이 로그인 하셨습니다. `:<Login/> } 
     </div>
   );
 }
