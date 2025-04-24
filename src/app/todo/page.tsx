@@ -10,7 +10,7 @@ interface Todo {
   completed:"O"|"X";
 }
 
-const baseurl = "http://localhost:3005/todos";
+const baseurl = "http://localhost:3000/api/todos";
 export default function TodoList() {
   const [tdata, setTdata] = useState<Todo[]>([]) ; 
 
