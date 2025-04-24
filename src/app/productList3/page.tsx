@@ -10,7 +10,7 @@ export default function ProductList3() {
             products.map(
                 (item:Product)=>
                 <li key={item.id} >
-                    <Link href={`/productDetail2?id=${item.id}`}>[{item.id}{item.name}]</Link>
+                    <Link href={`/productDetail3?id=${item.id}`}>[{item.id}{item.name}]</Link>
                 </li>
             )
         }
