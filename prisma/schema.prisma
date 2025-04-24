@@ -12,3 +12,10 @@ model Todo {
   text      String
   completed String   
 }
+
+model User {
+  no  Int @id @default(autoincrement())
+  id  String @unique   
+  pwd String
+  createdAt DateTime @default(now())  
+}
