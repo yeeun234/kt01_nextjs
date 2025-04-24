@@ -56,6 +56,11 @@ export default function Nav() {
             Product List2
           </div>
         </Link>
+        <Link href="/productList3">
+          <div className="bg-green-200  hover:bg-green-300   rounded-lg  sm:w-auto px-5 py-2.5 text-center">
+            Product List3
+          </div>
+        </Link>
         {/* {login && <Link href="/TodoList">
         <div className="bg-green-200  hover:bg-green-300   rounded-lg  sm:w-auto px-5 py-2.5 text-center">TodoList</div>
         </Link>}
